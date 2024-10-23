@@ -47,11 +47,17 @@ var filtered: Order[] = [];
 //   return filtered;
 
 const changeBranch = (orders: Order[]) => {
-  return orders.map((order) => ({
-    ...order,
-    date: format(order.date, "dd/MM/yyyy HH:mm:ss"),
-    status_delivery: 1,
-  }));
+  return orders.map((order) => {
+    const listOrders = ordersList.find(
+      (orderlist) => orderlist.id === order.id
+    );
+
+    return {
+      ...listOrders,
+      date: format(listOrders?.date!, "dd/MM/yyyy HH:mm:ss"),
+      status_delivery: 1,
+    };
+  });
 };
 
 const stoppedOrders = () => {
