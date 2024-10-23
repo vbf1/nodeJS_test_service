@@ -1,0 +1,24 @@
+{
+  "name": "nodejs_test_service",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "build": "tsc"
+  },
+  "keywords": [],
+  "author": "VBF-f4ti",
+  "license": "ISC",
+  "dependencies": {
+    "@types/express": "^5.0.0",
+    "axios": "^1.7.7",
+    "date-fns": "^4.1.0",
+    "express": "^4.21.1",
+    "typescript": "^5.6.3"
+  },
+  "devDependencies": {
+    "@types/axios": "^0.14.0",
+    "tsx": "^4.19.1"
+  }
+}
